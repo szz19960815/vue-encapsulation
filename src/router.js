@@ -16,7 +16,7 @@ const router = new Router({
 
 // 不需要登录就能访问的路由
 // 可以是路由name，也可以是路由path，根据自己项目和习惯定义
-const noLoginArr = ["home", "adminLogin"]
+const noLoginArr = ['home', 'adminLogin']
 
 // 添加路由导航守卫
 router.beforeEach((to, from, next) => {
