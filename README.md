@@ -12,11 +12,13 @@ router.js中配置路由表、导航守卫
 vue.config.js中进行vue@cli3的配置
 ```
 
-### 公共API调用
+### prototype扩展
 ```
 this.$login -> 登录
 this.$getConfig -> 获取配置信息
-this.$getUser -> 获取本地存储的用户信息
+this.$getUser -> 获取用户信息
+this.$getToken -> 获取本地Token
+this.$socket -> 进行socket连接
 ```
 
 ### 基于axios二次封装的请求方法

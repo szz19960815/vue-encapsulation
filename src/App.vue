@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="less">
-#app{
+#app {
   width: 100%;
   // min-width: 1000px;
   height: 100%;

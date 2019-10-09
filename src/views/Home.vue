@@ -3,8 +3,10 @@
     <h1>This is home page</h1>
     <el-button type="primary" @click="reqGet">发送get请求</el-button>
     <el-button type="primary" @click="reqPost">发送post请求</el-button>
-    <hr>
+    <hr />
     <el-button type="primary" @click="login('name', 'pwd')">登 录</el-button>
+    <hr />
+    <el-button type="primary" @click="$socket()">连接socket</el-button>
   </div>
 </template>
 
@@ -12,6 +14,15 @@
 export default {
   name: 'home',
   components: {},
+  data () {
+    return {
+      sockets: {
+        connect: (res) => {
+          console.log(res)
+        }
+      }
+    }
+  },
   methods: {
     reqGet () {
       this.$get('http://localhost:3000/users?id=123', { name: 'szz' })

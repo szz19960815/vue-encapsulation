@@ -111,7 +111,6 @@ Axios.interceptors.response.use(
   // 响应失败
   err => {
     loadingInstance.close()
-    console.log(err)
     prompt('网络连接错误！')
     return Promise.reject(err)
   }
