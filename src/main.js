@@ -17,6 +17,8 @@ import './assets/lib/css/reset.css'
 
 // 引入全局自定义组件
 import customComponents from './assets/lib/js/components'
+
+// vue全局注册依赖
 Vue.use(customComponents)
 
 // 全局注册自定义过滤器
