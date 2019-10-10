@@ -25,12 +25,13 @@
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-component": "^1.1.1",
-    "eslint": "^6.5.1",
+    "eslint": "5.0.0",
     "eslint-plugin-vue": "^5.2.3",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "qs": "^6.9.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.0"
   },
   "eslintConfig": {
     "root": true,

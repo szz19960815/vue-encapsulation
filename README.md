@@ -10,6 +10,7 @@ src->assers->lib->css->reset.css中修改全局重置样式
 src->assers->lib->css->element.js中选择按需加载的element组件
 router.js中配置路由表、导航守卫
 vue.config.js中进行vue@cli3的配置
+main.js中修改不必要选项
 ```
 
 ### prototype扩展
@@ -25,6 +26,14 @@ this.$socket -> 进行socket连接
 ```
 this.$post(url, params) -> post 请求
 this.$get(url, params) -> get 请求
+```
+
+### 基于vue-socket.io的封装
+```
+在main.js中实例化socket
+在实例化vue实例时，加入sockets，该sockets主要是连接成功，断开连接，获取配置等的响应事件
+在app.vue中根据需求看是否需要断开连接
+在各组件页面中分别使用不同的sockets，这些sockets都在/src/socket/index.js中进行暴露，使用解构的方式在相应组件中引入
 ```
 
 ### 基于element-ui封装的组件调用
@@ -57,6 +66,9 @@ assets 依赖目录
 components 组件目录
     common 通用性可服用组件
     根据页面名称，分别建立目录，存放相应页面下的特定业务组件，页面名称与目录名称一一对应
+
+socket websocket事件目录
+    index.js 暴露出各个组件中使用的sockets对象
 
 store vuex仓库目录
     index.js 定义仓库

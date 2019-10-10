@@ -8,8 +8,12 @@
 export default {
   name: 'app',
   created () {
+    // 判断是否已登录如果未登录断开连接
+    this.$socket.emit('disconnect', '客户端断开')
+    this.$socket.disconnect()
+    this.$socket.close()
     // 获取配置项
-    this.$getConfig()
+    // this.$getConfig()
   }
 }
 </script>

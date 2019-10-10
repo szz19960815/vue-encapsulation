@@ -1,8 +1,6 @@
 import Vue from 'vue'
-import store from '@/store/index'
 import { post } from '@/assets/http/index.js'
 import { Message } from 'element-ui'
-import VueSocketIo from 'vue-socket.io'
 
 let errMsg = (msg) => {
   return Message({
@@ -52,19 +50,4 @@ Vue.prototype.$getUser = () => {
  */
 Vue.prototype.$getToken = () => {
   return localStorage.getItem('Token')
-}
-
-/**
- * 连接sockset
- */
-Vue.prototype.$socket = () => {
-  Vue.use(new VueSocketIo({
-    debug: true,
-    connection: 'ws://121.40.165.18:8800',
-    vuex: {
-      store,
-      actionPrefix: 'SOCKET_',
-      mutionPrefix: 'SOCKET_'
-    }
-  }))
 }
