@@ -8,10 +8,10 @@
       <el-form-item label="密 码：" prop="password">
         <el-input type="password" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')" autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item class="btn">
+      <div class="btn">
         <el-button type="primary" @click="submitForm('ruleForm')">登 录</el-button>
         <el-button @click="resetForm('ruleForm')">清 空</el-button>
-      </el-form-item>
+      </div>
     </el-form>
   </section>
 </template>
@@ -105,13 +105,13 @@ export default {
     font-weight: 400;
     font-size: 32px;
     text-align: center;
-    margin: 40px 0;
+    margin: 20px 0;
   }
   .demo-ruleForm {
     width: 80%;
     margin: 0px auto;
     & > div {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     .btn {
       text-align: center;

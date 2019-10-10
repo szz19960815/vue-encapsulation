@@ -9,6 +9,8 @@
     <el-button type="primary" @click="loginThen">登录后连接socket</el-button>
     <el-button type="primary" @click="loginExit">退出登录断开socket</el-button>
     <el-button type="primary" @click="send">发送消息</el-button>
+    <hr />
+    <el-button type="wraning" @click="toTest">跳转测试</el-button>
   </div>
 </template>
 
@@ -26,6 +28,10 @@ export default {
     // }
   },
   methods: {
+    // 跳转测试
+    toTest () {
+      this.$router.push({ path: '/test' })
+    },
     reqGet () {
       this.$get('http://localhost:3000/users?id=123', { name: 'szz' })
         .then(res => {

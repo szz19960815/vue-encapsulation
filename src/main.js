@@ -17,7 +17,7 @@ import filters from './assets/filters/index'
 import './assets/lib/css/reset.css'
 
 // 引入全局自定义组件
-import customComponents from './assets/lib/js/components'
+import customComponents from './assets/lib/js/commonComponents'
 
 // 引入socket插件
 import VueSocketIo from 'vue-socket.io'

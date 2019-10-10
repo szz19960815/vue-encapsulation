@@ -1,6 +1,6 @@
 # vue-encapsulation
 
-## Project setup
+### Project setup
 ```
 npm install
 public->static->config->env.js中修改项目名称、版本号，请求访问端口地址等
@@ -11,6 +11,13 @@ src->assers->lib->css->element.js中选择按需加载的element组件
 router.js中配置路由表、导航守卫
 vue.config.js中进行vue@cli3的配置
 main.js中修改不必要选项
+```
+
+### 通用组件
+```
+路径：/src/components/common
+<login-form></login-form> 登录组件
+<xjl-transition></xjl-transition> 过渡动画组件
 ```
 
 ### prototype扩展
