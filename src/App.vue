@@ -22,7 +22,7 @@ export default {
 #app {
   width: 100%;
   // min-width: 1000px;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;

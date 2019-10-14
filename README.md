@@ -26,7 +26,7 @@ this.$login -> 登录
 this.$getConfig -> 获取配置信息
 this.$getUser -> 获取用户信息
 this.$getToken -> 获取本地Token
-this.$socket -> 进行socket连接
+this.$createLoading(options) -> 可配置loading，返回loading实例
 ```
 
 ### 基于axios二次封装的请求方法
@@ -45,7 +45,8 @@ this.$get(url, params) -> get 请求
 
 ### 基于element-ui封装的组件调用
 ```
-this.$loading -> Loading 组件
+this.$loading -> Loading 组件(全屏)
+this.$loading().close() -> Loading（全屏） 消失
 this.$msgbox -> MessageBox 弹窗组件
 this.$alert -> MessageBox alert 组件
 this.$confirm -> MessageBox confirm 组件

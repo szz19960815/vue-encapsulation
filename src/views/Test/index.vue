@@ -25,6 +25,23 @@
         </xjl-transition>
       </div>
     </div>
+    <div class="box">
+      <h2>模态弹窗组件：</h2>
+      <el-button style="margin-bottom : 10px;" @click="dialogShow = !dialogShow">测试</el-button>
+      <xjl-dialog
+        :show.sync="dialogShow"
+        title="测试标题"
+        :center="true"
+        :fullScreen="true"
+        :footer="true"
+      >
+        <div>123</div>
+      </xjl-dialog>
+    </div>
+    <div class="box loadingTestBox">
+      <h2>Loading组件：</h2>
+      <el-button type="warning" @click="testLoading">测试loading</el-button>
+    </div>
   </section>
 </template>
 
@@ -33,7 +50,27 @@ export default {
   name: 'test',
   data () {
     return {
-      show: true
+      show: true,
+      dialogShow: false
+    }
+  },
+  methods: {
+    testLoading () {
+      // 全屏loading
+      // this.$loading()
+      // setTimeout(() => {
+      //   this.$loading().close()
+      // }, 1000)
+      let demoLoading = this.$createLoading({
+        target: '.loadingTestBox',
+        fullcreen: false,
+        lock: false,
+        text: 'wait a moment',
+        background: 'yellow'
+      })
+      setTimeout(() => {
+        demoLoading.close()
+      }, 3000)
     }
   }
 }
