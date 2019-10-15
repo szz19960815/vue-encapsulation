@@ -18,6 +18,9 @@ main.js中修改不必要选项
 路径：/src/components/common
 <login-form></login-form> 登录组件
 <xjl-transition></xjl-transition> 过渡动画组件
+<xjl-dialog></xjl-dialog> 模态弹窗组件
+this.$createLoading(options) loading组件
+<xjl-table></xjl-table> 表格组件
 ```
 
 ### prototype扩展

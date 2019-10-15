@@ -1,9 +1,13 @@
 import LoginForm from '../../../components/common/LoginForm.vue'
 import XjlTransition from '../../../components/common/XjlTransition.vue'
+import XjlDialog from '../../../components/common/XjlDialog.vue'
+import XjlTable from '../../../components/common/XjlTable.vue'
 
 let components = {
   LoginForm,
-  XjlTransition
+  XjlTransition,
+  XjlDialog,
+  XjlTable
 }
 
 const customComponents = {

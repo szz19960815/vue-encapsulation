@@ -16,6 +16,9 @@ import filters from './assets/filters/index'
 // 引入重置样式文件
 import './assets/lib/css/reset.css'
 
+// 引入element全局修改样式
+import './assets/lib/css/element.css'
+
 // 引入全局自定义组件
 import customComponents from './assets/lib/js/commonComponents'
 
@@ -41,7 +44,7 @@ Object.keys(filters).forEach(key => {
 
 Vue.config.productionTip = false
 
-new Vue({
+window.vm = new Vue({
   sockets: mainSocket,
   router,
   store,

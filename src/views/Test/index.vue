@@ -32,8 +32,9 @@
         :show.sync="dialogShow"
         title="测试标题"
         :center="true"
-        :fullScreen="true"
+        :fullScreen="false"
         :footer="true"
+        width="80%"
       >
         <div>123</div>
       </xjl-dialog>
@@ -41,6 +42,15 @@
     <div class="box loadingTestBox">
       <h2>Loading组件：</h2>
       <el-button type="warning" @click="testLoading">测试loading</el-button>
+    </div>
+    <div class="box">
+      <h2>表格组件：</h2>
+      <xjl-table
+        :table="table"
+        border
+        height
+        :headerStyle="{fontWeight: '400 !important', color: 'red', fontSize: '16px'}"
+      ></xjl-table>
     </div>
   </section>
 </template>
@@ -51,7 +61,41 @@ export default {
   data () {
     return {
       show: true,
-      dialogShow: false
+      dialogShow: false,
+      table: {
+        column: [
+          { title: '日期', name: 'date', width: '', minWdith: '', filter: 'formatDateD', btn: [], align: 'center' },
+          { title: '姓名', name: 'name', width: '', minWdith: '', filter: '', btn: [], align: '' },
+          { title: '地址', name: 'address', width: '', minWdith: '', filter: '', btn: [], align: '' },
+          {            title: '操作',
+            name: '',
+            width: '',
+            minWdith: '',
+            filter: '',
+            btn: [
+              { type: 'primary', label: '查看', size: 'mini', callback: this.tableCall },
+              { type: 'danger', label: '删除', size: 'small', callback: this.tableCall }
+            ],
+            align: ''          }
+        ],
+        list: [{
+          date: 1571105211,
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: 1571105211,
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1517 弄'
+        }, {
+          date: 1571105211,
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1519 弄'
+        }, {
+          date: 1571105211,
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1516 弄'
+        }]
+      }
     }
   },
   methods: {
@@ -71,6 +115,9 @@ export default {
       setTimeout(() => {
         demoLoading.close()
       }, 3000)
+    },
+    tableCall (a, b) {
+      console.log('这是表格的回调', a, b)
     }
   }
 }
@@ -93,7 +140,7 @@ export default {
       font-weight: normal;
       margin-bottom: 10px;
     }
-    &>div{
+    & > div {
       display: flex;
       min-height: 100px;
       flex-wrap: wrap;

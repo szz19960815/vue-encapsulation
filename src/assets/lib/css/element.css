@@ -1,0 +1,6 @@
+.el-table--border th, .el-table__fixed-right-patch{
+  border-bottom: 1px solid #EBEEF5 !important;
+}
+.el-table__body, .el-table__footer, .el-table__header{
+  border-collapse: collapse;
+}
