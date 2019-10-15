@@ -48,7 +48,7 @@ export default {
     },
     headerStyle: {
       type: Object,
-      default: {}
+      default: () => ({})
     }
   },
   data () {
@@ -60,7 +60,7 @@ export default {
     this.table.column.forEach(item => {
       if (item.filter) {
         this.table.list.forEach(data => {
-          if ( typeof data[item.name] === 'number'){
+          if (typeof data[item.name] === 'number') {
             data[item.name] = this.$w.vm.$options.filters[item.filter](data[item.name])
           }
         })

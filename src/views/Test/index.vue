@@ -67,7 +67,7 @@ export default {
           { title: '日期', name: 'date', width: '', minWdith: '', filter: 'formatDateD', btn: [], align: 'center' },
           { title: '姓名', name: 'name', width: '', minWdith: '', filter: '', btn: [], align: '' },
           { title: '地址', name: 'address', width: '', minWdith: '', filter: '', btn: [], align: '' },
-          {            title: '操作',
+          { title: '操作',
             name: '',
             width: '',
             minWdith: '',
@@ -76,7 +76,7 @@ export default {
               { type: 'primary', label: '查看', size: 'mini', callback: this.tableCall },
               { type: 'danger', label: '删除', size: 'small', callback: this.tableCall }
             ],
-            align: ''          }
+            align: '' }
         ],
         list: [{
           date: 1571105211,
