@@ -29,7 +29,7 @@ import VueSocketIo from 'vue-socket.io'
 Vue.use(customComponents)
 Vue.use(new VueSocketIo({
   debug: true,
-  connection: 'http://127.0.0.1:3000',
+  connection: 'http://106.13.105.136:3000',
   vuex: {
     store,
     actionPrefix: 'SOCKET_',
